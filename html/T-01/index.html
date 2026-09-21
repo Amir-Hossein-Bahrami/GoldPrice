@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>قیمت لحظه‌ای طلا</title>
+        <link rel="icon" type="image/x-icon" href="data/gold-price.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="body">
+
+        <div class="grid-background"></div>
+
+        <header id="header">
+            <nav id="navbar">
+                <a href="#">
+                    <img id="header-img" src="data/gold-price.png" alt="لوگوی سایت">
+                </a>
+                <a href="#table-price">جدول قیمت</a>
+                <a href="#buy-gold">خرید طلا</a>
+                <a href="#sell-gold">فروش طلا</a>
+                <a href="#about-us">درباره ما</a>
+            </nav>
+        </header>
+
+        <div id="introduction">
+            <div id="introduction-wrapper">
+            <div class="introduction-text">
+                <h1 class="title-text">قیمت لحظه <span class="gold-text">طلا</span></h1>
+                <h1 class="title-text">خرید و فروش <span class="gold-text">طلا</span></h1>
+                <h4 class="sub-text">در هر 24 ساعت شبانه روز</h4>
+            </div>
+            <div class="introduction-image">
+                <img src="data/title.png" alt="تصویر عنوان" width="400" height="300">
+            </div>
+            </div>
+        </div>
+
+<div id="table-price">
+
+    <div class="table-header-section">
+        <h2 id="title-price">جدول قیمت</h2>
+        <p id="sub-title">قیمت‌ها نزدیک‌ترین قیمت به قیمت لحظه‌ای هستند و صرفاً با جست‌وجوی سایت‌ها به‌دست آمده و تضمینی در آن نیست.</p>
+    </div>
+    
+    <div class="table-wrapper">
+    <table id="table">
+        <thead>
+            <tr class="table-header">
+                <th>نام</th>
+                <th>مقدار</th>
+                <th>قیمت</th>
+                <th>تاریخ امروز</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-row">
+                <td>طلای ۱۸ عیار</td>
+                <td>۱ گرم</td>
+                <td id="gold-18-price">درحال دریافت...</td>
+                <td id="gold-18-date">#</td>
+            </tr>
+            <tr class="table-row">
+                <td>طلای 24 عیار</td>
+                <td>۱ گرم</td>
+                <td id="gold-24-price">درحال دریافت...</td>
+                <td id="gold-18-date">#</td>
+            </tr>
+            <tr class="table-row">
+                <td>سکه تمام</td>
+                <td>۱ گرم</td>
+                <td id="seke-tamam-price">درحال دریافت...</td>
+                <td id="seke-tamam-date">#</td>
+            </tr>
+            <tr class="table-row">
+                <td>سکه نیم</td>
+                <td>۱ گرم</td>
+                <td id="seke-nim-price">درحال دریافت...</td>
+                <td id="seke-nim-date">#</td>
+            </tr>
+            <tr class="table-row">
+                <td>سکه ربع</td>
+                <td>۱ گرم</td>
+                <td id="seke-rob-price">درحال دریافت...</td>
+                <td id="seke-rob-date">#</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+        <div id="buy-gold">
+            <div class="buy-header-section">
+                <h2 id="title-buy">خرید</h2>
+                <p id="buy-description">نوع و مقدار طلا را انتخاب کنید و خرید خود را ثبت کنید.</p>
+            </div>
+            <form class="buy-wrapper" id="buy-gold-form">
+                <div class="form-group">
+                    <label class="buy-gold-label" for="gold-type">نوع طلا:</label>
+                    <select id="gold-type" name="gold-type" required>
+                        <option value="" disabled selected>انتخاب کنید</option>
+                        <option value="gold18">طلای ۱۸ عیار</option>
+                        <option value="gold24">طلای ۲۴ عیار</option>
+                        <option value="sekee-emami">سکه تمام</option>
+                        <option value="nim">سکه نیم</option>
+                        <option value="rob">سکه ربع</option>
+                    </select>
+                </div>
+                <hr class="dividing-line">
+                <div class="form-group">
+                    <label class="buy-gold-label" for="gold-amount">مقدار (گرم):</label>
+                    <input type="number" id="gold-amount" name="gold-amount" placeholder="مثلا 5" min="1" step="1" required>
+                </div>
+                <hr class="dividing-line">
+                <div class="form-group">
+                    <label class="buy-gold-label" for="gold-price">قیمت کل:</label>
+                    <label id="gold-price">بدون قیمت</label>
+                </div>
+                <hr class="dividing-line">
+                <div class="form-group form-group-submit">
+                    <button type="submit" id="gold-buy" name="gold-buy">خـــرید</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="sell-gold">
+            <div class="sell-header-section">
+                <h2 id="title-sell">فروش</h2>
+                <p id="sell-description">نوع و مقدار طلا را انتخاب کنید و فروش خود را ثبت کنید.</p>
+            </div>
+            <form class="sell-wrapper" id="sell-gold-form">
+                <div class="form-group">
+                    <label class="sell-gold-label" for="sell-gold-type">نوع طلا:</label>
+                    <select id="sell-gold-type" name="sell-gold-type" required>
+                        <option value="" disabled selected>انتخاب کنید</option>
+                        <option value="gold18">طلای ۱۸ عیار</option>
+                        <option value="gold24">طلای ۲۴ عیار</option>
+                        <option value="sekee-emami">سکه تمام</option>
+                        <option value="nim">سکه نیم</option>
+                        <option value="rob">سکه ربع</option>
+                    </select>
+                </div>
+                <hr class="dividing-line">
+                <div class="form-group">
+                    <label class="sell-gold-label" for="sell-gold-amount">مقدار (گرم):</label>
+                    <input type="number" id="sell-gold-amount" name="sell-gold-amount" placeholder="مثلا 5" min="1" step="1" required>
+                </div>
+                <hr class="dividing-line">
+                <div class="form-group">
+                    <label class="sell-gold-label" for="sell-gold-price">قیمت کل:</label>
+                    <label id="sell-gold-price">بدون قیمت</label>
+                </div>
+                <hr class="dividing-line">
+                <div class="form-group form-group-submit">
+                    <button type="submit" id="gold-sell" name="gold-sell">فــروش</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="about-us">
+            <div class="about-header-section">
+                <h2 id="about-title">درباره ما</h2>
+                <p id="about-description">
+                   ما اینجا تلاش می‌کنیم دسترسی به قیمت طلا را ساده‌تر، سریع‌تر و شفاف‌تر کنیم.<br>
+                   در این سایت می‌توانید قیمت‌های به‌روز طلا را مشاهده کنید و در محیطی ساده، فرآیند خرید و فروش طلا را بررسی و مدیریت کنید.<br>
+                   هدف ما ارائه تجربه‌ای سریع، قابل فهم و بدون پیچیدگی برای کاربرانی است که می‌خواهند وضعیت بازار طلا را راحت‌تر دنبال کنند.<br>
+                   اطلاعات قیمتی موجود در سایت از منابع مختلف جمع‌آوری می‌شود و ممکن است با قیمت نهایی بازار اختلاف داشته باشد؛ بنابراین پیشنهاد می‌کنیم پیش از هر تصمیم مالی، قیمت نهایی را بررسی کنید.
+                </p>
+            </div>
+            <div class="about-img-section">
+                <div class="about-img-wrapper">
+                    <div class="about-img">
+                         <img src="data/chart-line-up.png" alt="نمودار قیمت طلا" width="48" height="48">
+                    </div>
+                    <p class="about-img-text">قیمت‌های به‌روز</p>
+                </div>
+                <div class="about-img-wrapper">
+                    <div class="about-img">
+                         <img src="data/bolt.png" alt="رابط گرافیکی ساده" width="48" height="48">
+                    </div>
+                    <p class="about-img-text">محیط ساده و سریع</p>
+                </div>
+                <div class="about-img-wrapper">
+                    <div class="about-img">
+                         <img src="data/handshake.png" alt="تمرکز بر شفافیت و اعتماد" width="48" height="48">
+                    </div>
+                    <p class="about-img-text">تمرکز بر شفافیت و اعتماد</p>
+                </div>
+            </div>
+        </div>
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="footer-brand-text">
+                <h2 class="footer-title">قیمت لحظه <span class="gold-text">طلا</span></h2>
+                <h2 class="footer-title">خرید و فروش <span class="gold-text">طلا</span></h2>
+                <p class="footer-subtitle">در هر 24 ساعت شبانه روز</p>
+            </div>
+            <img class="footer-brand-image" src="data/title.png" alt="تصویر طلا">
+        </div>
+        <div class="footer-links">
+            <h3 class="footer-section-title">دسترسی سریع</h3>
+            <a class="footer-link" href="#">خانه</a>
+            <a class="footer-link" href="#table-price">جدول قیمت</a>
+            <a class="footer-link" href="#buy-gold">خرید طلا</a>
+            <a class="footer-link" href="#sell-gold">فروش طلا</a>
+            <a class="footer-link" href="#about-us">درباره ما</a>
+        </div>
+        <div class="footer-contact">
+            <h3 class="footer-section-title">ارتباط با ما</h3>
+            <a class="footer-contact-link" href="#">ایمیل</a>
+            <a class="footer-contact-link" href="#">شبکه‌های اجتماعی</a>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-warning">
+                قیمت‌های نمایش‌داده‌شده صرفاً جهت اطلاع هستند و ممکن است
+                با قیمت نهایی بازار اختلاف داشته باشند.
+            </p>
+            <p class="footer-copyright">© 2026 تمامی حقوق محفوظ است.</p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+    <script src="script.js"></script>
+</html>

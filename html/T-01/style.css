@@ -1,0 +1,626 @@
+@font-face {
+    font-family: YekanBakh;
+    src: url(data/font/YEKANBAKH-REGULAR.TTF) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: YekanBakh;
+    src: url(data/font/YEKANBAKH-MEDIUM.TTF) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: YekanBakh;
+    src: url(data/font/YEKANBAKH-SEMIBOLD.TTF) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: YekanBakh;
+    src: url(data/font/YEKANBAKH-BOLD.TTF) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: YekanBakh;
+    src: url(data/font/YEKANBAKH-EXTRABOLD.TTF) format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+body{
+    font-family: YekanBakh;
+    font-weight: 400;
+}
+
+input,
+select,
+button,
+textarea{
+    font-family: inherit;
+}
+
+.grid-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: 
+        linear-gradient(to right, #c9a22725 1px, transparent 1px),
+        linear-gradient(to bottom, #c9a22725 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+}
+
+/*------ Header-Navbar ------*/
+
+#header{
+    background-color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+}
+
+#navbar{
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    font-width: 800;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+#navbar a:hover{
+    color: #F1BB1E;
+    transition: color 0.3s ease;
+}
+
+#header-img{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------ Introduction ------*/
+
+#introduction {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+#introduction-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 3% 5%;
+}
+
+.introduction-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 400px;
+    background-color: rgba(255,255,255,0.5);
+    max-width: 400px;
+    padding-right: 20%;
+    padding-top: 10px;
+}
+
+.title-text {
+    margin: 0;
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+.sub-text {
+    margin: 0;
+    margin-top: 12px;   
+    font-size: 1.2rem;
+    color: #F1BB1E;
+}
+
+.gold-text {
+    color: #ffd65c;
+}
+
+.introduction-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 300px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.introduction-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*------ Table-Price ------*/
+
+#table-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table-header-section{
+    max-width: 800px;
+    width: 100%;
+    margin-right: 5px;
+    text-align: right;
+}
+
+#title-price{
+    margin: 0;
+    white-space: nowrap;
+    color: #F1BB1E;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#sub-title{
+    margin: 0;
+    color: gray;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.table-wrapper{
+    background-color: rgba(255,255,255,0.6);
+    overflow: hidden;
+    border: 1px solid #ffd65c;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    margin: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+}
+
+#table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.table-header{
+    color: #eeb710;
+    background-color: rgba(255, 214, 92, 0.1);
+}
+
+.table-header th{
+    padding: 14px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.table-row td{
+    padding: 12px;
+    border-bottom: 1px solid #fff3d6;
+}
+
+.table-row:nth-child(even) {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.table-row:nth-child(odd) {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.table-row:hover {
+    background-color: #fff3d6;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+/*------ Buy-Gold ------*/
+
+#buy-gold{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buy-header-section{
+    max-width: 800px;
+    width: 100%;
+    margin-right: 5px;
+    text-align: right;
+}
+
+#title-buy{
+    margin: 0;
+    white-space: nowrap;
+    color: #F1BB1E;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#buy-description{
+    margin: 0;
+    color: gray;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.buy-wrapper{
+    background-color: rgba(255,255,255,0.6);
+    overflow: hidden;
+    border: 1px solid #ffd65c;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    margin: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+}
+
+.form-group{
+    margin: 3% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.form-group-submit{
+    justify-content: flex-end;
+}
+
+.dividing-line{
+    border: none;
+    height: 1px;
+    margin: 0px 20px;
+    background-color: #fff3d6;
+}
+
+.buy-gold-label{
+    font-size: 1.2rem;
+}
+
+#gold-type{
+    border: 1px solid black;
+    border-radius: 8px;
+    direction: ltr;
+    max-width: 300px;
+    width: 100%;
+    max-height: 40px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+#gold-amount{
+    border: 1px solid black;
+    border-radius: 8px;
+    max-width: 282px;
+    width: 100%;
+    max-height: 40px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+#gold-price{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #eeb710;
+}
+
+#gold-buy{
+    background-color: rgb(14, 215, 81);
+    border: 2px solid black;
+    border-radius: 8px;
+    max-width: 100px;
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#gold-buy:hover{
+    background-color: rgb(72, 243, 129);
+    transform: translateY(-5px);
+}
+
+/*------ Sell-Gold ------*/
+
+#sell-gold{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sell-header-section{
+    max-width: 800px;
+    width: 100%;
+    margin-right: 5px;
+    text-align: right;
+}
+
+#title-sell{
+    margin: 0;
+    white-space: nowrap;
+    color: #F1BB1E;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#sell-description{
+    margin: 0;
+    color: gray;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.sell-wrapper{
+    background-color: rgba(255,255,255,0.6);
+    overflow: hidden;
+    border: 1px solid #ffd65c;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    margin: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+}
+
+.sell-gold-label{
+    font-size: 1.2rem;
+}
+
+#sell-gold-type{
+    border: 1px solid black;
+    border-radius: 8px;
+    direction: ltr;
+    max-width: 300px;
+    width: 100%;
+    max-height: 40px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+#sell-gold-amount{
+    border: 1px solid black;
+    border-radius: 8px;
+    max-width: 282px;
+    width: 100%;
+    max-height: 40px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+#sell-gold-price{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #eeb710;
+}
+
+#gold-sell{
+    background-color: rgb(255, 76, 76);
+    border: 2px solid black;
+    border-radius: 8px;
+    max-width: 100px;
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#gold-sell:hover{
+    background-color: rgb(255, 120, 120);
+    transform: translateY(-5px);
+}
+
+/*------ About-Us ------*/
+
+#about-us{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-header-section{
+    max-width: 800px;
+    width: 100%;
+    margin-right: 5px;
+    text-align: right;
+}
+
+#about-title{
+    margin: 0;
+    white-space: nowrap;
+    color: #F1BB1E;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#about-description{
+    margin: 0;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.about-img-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 50px;
+    margin-top: 80px;
+}
+
+.about-img-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 200px;
+    max-height: 500px;
+    height: 200px;
+    background-color: rgba(255,255,255,0.6);
+    border: 2px solid #ffd65c;
+    border-radius: 15px;
+    padding: 10px;
+    gap: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.about-img-wrapper:hover{
+    transform: translateY(-5px);
+}
+
+.about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9ec;
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.about-img-text{
+    color: #F1BB1E;
+    flex-wrap: nowrap;
+    font-weight: bold;
+}
+
+/* ---------- Footer ---------- */
+
+#footer{
+    margin-top: 100px;
+    background-color: rgba(255,255,255,0.6);
+    border-top: 1px solid #ffd65c;
+    box-shadow: 0 -6px 25px rgba(0,0,0,0.04);
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 30px 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+    align-items: start;
+}
+
+.footer-brand{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand-image{
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-brand-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title{
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.footer-subtitle{
+    margin: 8px 0 0;
+    color: #F1BB1E;
+}
+
+.footer-section-title{
+    margin: 0 0 10px;
+
+    color: #F1BB1E;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.footer-links,
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link,
+.footer-contact-link{
+    text-decoration: none;
+    color: #333;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-contact-link:hover{
+    color: #F1BB1E;
+    transform: translateX(-5px);
+}
+
+.footer-bottom{
+    grid-column: 1 / -1;
+
+    margin-top: 15px;
+    padding-top: 20px;
+
+    border-top: 1px solid #fff3d6;
+
+    text-align: center;
+}
+
+.footer-warning{
+    margin: 0 0 8px;
+
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-copyright{
+    margin: 0;
+
+    color: #999;
+    font-size: 0.85rem;
+}
